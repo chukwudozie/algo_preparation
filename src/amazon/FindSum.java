@@ -89,6 +89,4 @@ public class FindSum {
         }
         return arr;
     }
-
-
 }
