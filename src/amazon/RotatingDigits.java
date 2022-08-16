@@ -16,7 +16,7 @@ import java.util.Map;
 public class RotatingDigits {
 
     public static void main(String[] args) {
-        System.out.println(confusingNumber(111));
+        System.out.println(confusingNumber(20));
     }
     static Map<Integer, Integer>map = new HashMap<>();
     static int result= 0;
@@ -50,7 +50,6 @@ public class RotatingDigits {
             res = res * 10 + map.get((int)n % 10);
             n /= 10;
         }
-
         return res != src;
     }
 }
