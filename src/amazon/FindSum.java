@@ -1,12 +1,21 @@
 package amazon;
 
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.Date;
 
 public class FindSum {
 
     public static void main(String[] args) {
         int []num1 = {2,4,6,7,8,9,0};
         System.out.println(Arrays.toString(findSum(num1, 12)));
+        System.out.println(Date.from(Instant.now()));
+        System.out.println(LocalDateTime.now());
+        System.out.println(Timestamp.from(Instant.now()));
+        System.out.println(LocalDate.now());
     }
 
     public static int partition(int[] arr, int low, int high){

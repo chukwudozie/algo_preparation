@@ -14,7 +14,8 @@ public class CheckSumOfTwo {
         int[] test1 = {1,3,5,7,8};
         int[] test2 = {4,5,6,7,1};
 //        System.out.println(determineIfSumIsEqualToTarget(test1, 10));
-        System.out.println(determineIfSumIsEqualToTarget(test2, 1));
+        System.out.println("Answer 1 "+determineIfSumIsEqualToTarget(test2, 13));
+        System.out.println("Answer 2 "+Arrays.toString(findPairs(test2, 13)));
     }
 
     public static boolean determineIfSumIsEqualToTarget(int[] input, int target){
@@ -34,11 +35,22 @@ public class CheckSumOfTwo {
 
         }
 
-        System.out.println("gbf");
+
         foundValues.forEach(System.err::println);
         result.forEach((k,y) -> System.out.println(k+" : "+y));
-
         return false;
+    }
 
+    public static int[] findPairs(int[] input, int target) {
+        int [] output = new int[2];
+        for (int i = 0; i < input.length; i++){
+            for (int j = i+1; j < input.length; j++){
+                if (input[i] + input[j] == target) {
+                    output[0] = input[i];
+                    output[1] = input[j];
+                }
+            }
+        }
+        return output;
     }
 }
